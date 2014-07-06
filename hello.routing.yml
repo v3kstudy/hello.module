@@ -1,0 +1,7 @@
+hello.admin_index:
+    path: '/admin/config/development/hello'
+    defaults:
+        _title: 'Hello Admin'
+        _content: 'Drupal\hello\Controller\AdminIndexController::helloAdminAction'
+    requirements:
+        _permission: 'access site reports'

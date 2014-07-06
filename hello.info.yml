@@ -1,0 +1,8 @@
+name: Hello Drupal
+description: 'My module for studying Drupal 8'
+package: Andy Truong
+type: module
+version: 8.x-1.0-dev
+core: 8.x
+dependencies: [node]
+configure: hello.admin_index
