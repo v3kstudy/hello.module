@@ -5,3 +5,46 @@ hello.admin_index:
         _content: 'Drupal\hello\Controller\AdminIndexController::helloAdminAction'
     requirements:
         _permission: 'access site reports'
+
+# @TODO This does not work as expected
+#   Question asked http://drupal.stackexchange.com/questions/123355/how-to-defaint-an-optional-argument-to-route-callback
+hello.sayHi:
+  path: '/hello/{name}'
+  defaults:
+    _title: 'Say Hi'
+    _content: 'Drupal\hello\Controller\SimpleCallback::sayHiAction'
+    custom_arg: 'there'
+  requirements:
+      _permission: 'access content'
+
+hello.simple_callback:
+    path: '/simple_callback'
+    defaults:
+        _title: Very simple callback
+        _content: 'Drupal\hello\Controller\SimpleCallback::noArgumentAction'
+    requirements:
+        _access: 'TRUE'
+
+hello.callback_arguments_aware:
+    path: '/callback_arguments/{a1}/{a2}'
+    defaults:
+        _title: Callback with arguments
+        _content: 'Drupal\hello\Controller\SimpleCallback::argumentAwareAction'
+    requirements:
+        _access: 'TRUE'
+
+hello.callback_request_aware:
+    path: '/callback_request_aware'
+    defaults:
+        _title: Callback with Request aware
+        _content: 'Drupal\hello\Controller\SimpleCallback::requestAwareAction'
+    requirements:
+        _access: 'TRUE'
+
+hello.callback_return_response:
+    path: '/callback_return_response'
+    defaults:
+        _title: Callback return Response directly
+        _content: 'Drupal\hello\Controller\SimpleCallback::directResponseAction'
+    requirements:
+        _access: 'TRUE'
