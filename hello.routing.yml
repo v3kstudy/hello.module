@@ -49,6 +49,14 @@ hello.callback_return_response:
     requirements:
         _access: 'TRUE'
 
+hello.hi_injection:
+    path: '/hi_injection'
+    defaults:
+        _title: My Controller
+        _controller: 'Drupal\hello\Controller\MyController::myAction'
+    requirements:
+        _permission: 'access content'
+
 hello.hiForm:
     path: '/hi_form'
     defaults:
