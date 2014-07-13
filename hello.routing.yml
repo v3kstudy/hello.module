@@ -60,6 +60,14 @@ hello.hi_injection:
     requirements:
         _permission: 'access content'
 
+hello.hi_param_converter:
+    path: /hi_param_converter/{country}
+    defaults:
+        _title: Hello Param converter
+        _content: 'Drupal\hello\Controller\SimpleCallback::hiParamConverterAction'
+    requirements:
+        _permission: 'access content'
+
 hello.hiForm:
     path: '/hi_form'
     defaults:

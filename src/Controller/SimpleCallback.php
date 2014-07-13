@@ -31,7 +31,7 @@ class SimpleCallback extends ControllerBase
         return [
             '#prefix' => '<pre>',
             '#markup' => print_r($request->query->all(), true)
-                . print_r($request, true),
+            . print_r($request, true),
             '#suffix' => '</pre>'
         ];
     }
@@ -44,6 +44,11 @@ class SimpleCallback extends ControllerBase
     public function sayHiAction($name = 'there')
     {
         return 'Hi ' . $name . '!';
+    }
+
+    public function hiParamConverterAction($country)
+    {
+        return 'Hi ' . $country;
     }
 
 }

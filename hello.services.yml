@@ -3,3 +3,9 @@ services:
         class: Drupal\hello\Routing\RouteSubscriber
         tags:
             - { name: event_subscriber }
+
+    hello.route_enhancer:
+        class: Drupal\hello\Routing\DemoRouteEnhancer
+        arguments: ['@controller_resolver', '@entity.manager', '@form_builder']
+        tags:
+            - { name: route_enhancer, priority: 20 }
