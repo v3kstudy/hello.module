@@ -1,3 +1,6 @@
+route_callbacks:
+    - Drupal\hello\Routing\DemoRoutesCallbacks::getRoutes
+
 hello.admin_index:
     path: '/admin/config/development/hello'
     defaults:
