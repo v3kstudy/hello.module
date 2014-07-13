@@ -27,9 +27,11 @@ class SimpleCallback extends ControllerBase
 
     public function requestAwareAction(Request $request)
     {
+        # echo '<pre>', $request, '</pre>';
         return [
             '#prefix' => '<pre>',
-            '#markup' => print_r($request->query->all(), true),
+            '#markup' => print_r($request->query->all(), true)
+                . print_r($request, true),
             '#suffix' => '</pre>'
         ];
     }

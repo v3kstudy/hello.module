@@ -13,7 +13,7 @@ hello.sayHi:
   defaults:
     _title: 'Say Hi'
     _content: 'Drupal\hello\Controller\SimpleCallback::sayHiAction'
-    custom_arg: 'there'
+    name: 'there'
   requirements:
       _permission: 'access content'
 
