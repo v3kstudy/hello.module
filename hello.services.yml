@@ -9,3 +9,6 @@ services:
         arguments: ['@controller_resolver', '@entity.manager', '@form_builder']
         tags:
             - { name: route_enhancer, priority: 20 }
+
+    hello.static_service:
+        class: Drupal\hello\StaticService
