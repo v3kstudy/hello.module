@@ -4,6 +4,14 @@ namespace Drupal\hello\Controller;
 
 use Drupal\Core\Form\FormBase;
 
+/**
+ * Form API in Drupal https://www.drupal.org/node/2117411
+ *
+ * Exercises:
+ *  - #cache, #multisteps
+ *  - Confirm form
+ *  - Config form
+ */
 class HiForm extends FormBase // implements \Drupal\Core\Form\FormInterface
 {
 
