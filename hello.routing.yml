@@ -52,6 +52,16 @@ hello.callback_return_response:
 hello.hiForm:
     path: '/hi_form'
     defaults:
+        _title: Hello Form
         _form: 'Drupal\hello\Controller\HiForm'
+    requirements:
+        _permission: 'access content'
+
+# Change record: https://www.drupal.org/node/2056839
+hello.entityView:
+    path: '/hi_entity_view/{user}'
+    defaults:
+        _title: Hello Entity View
+        _entity_view: 'user.default'
     requirements:
         _permission: 'access content'
