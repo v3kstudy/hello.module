@@ -48,3 +48,10 @@ hello.callback_return_response:
         _content: 'Drupal\hello\Controller\SimpleCallback::directResponseAction'
     requirements:
         _access: 'TRUE'
+
+hello.hiForm:
+    path: '/hi_form'
+    defaults:
+        _form: 'Drupal\hello\Controller\HiForm'
+    requirements:
+        _permission: 'access content'
